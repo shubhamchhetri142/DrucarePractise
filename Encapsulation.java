@@ -1,21 +1,24 @@
 package com.oops;
-
-
-class A{
-	private int value;// data hiding
-	public void getValue(int x) {//data abstraction
-		value=x;
+class Hide{
+	private String name;
+	private int PhoneNumber;
+	public void setHide(String n,int pn) {
+		name=n;
+		PhoneNumber=pn;
 	}
-	public int setValue() {
-		return value;
+	public String getname() {
+		return name;
+	}
+	public int getPhoneNumber() {
+		return PhoneNumber;
 	}
 }
 
-
-public class Encapsulation {
-	  public static void main(String[] args) {
-	    A s=new A();
-	    s.getValue(100);
-	    System.out.println(s.setValue());
-	  }
+public class Encapsulation{
+	public static void main(String args[]) {
+		Hide h=new Hide();
+		h.setHide("Drucare", 987654321);
+		System.out.println(h.getname());
+		System.out.println(h.getPhoneNumber());
 	}
+}
