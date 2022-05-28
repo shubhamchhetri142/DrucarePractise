@@ -20,12 +20,13 @@ public class StreamsDemo {
 		List<String> containslist = citynames.stream()
 				.map(names -> names.concat(" Metro")).collect(Collectors.toList());
 		System.out.println(contains);
-		List<String> append = citynames.stream().filter(names -> names.concat("Metro"))
+		List<String> appendlist = citynames.stream().filter(names -> names.concat("Metro"))
 				.map(names -> names.toUpperCase()).collect(Collectors.toList());
-		List<String> sort = citynames.stream().sorted().collect(Collectors.toList());
-		System.out.println(sort);
-		long count = citynames.stream().filter(names -> names.length() > 0).count();
-		System.out.println(count);
+		System.out.println(appendlist);
+		List<String> sortlist = citynames.stream().sorted().collect(Collectors.toList());
+		System.out.println(sortlist);
+		long countlist = citynames.stream().filter(names -> names.length() > 0).count();
+		System.out.println(countlist);
 		List<String> firstlist=citynames.stream().findFirst().get();
 		System.out.println(firstlist);
 	}
