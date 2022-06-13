@@ -19,37 +19,24 @@ public class FoodService {
 				new FoodDemo("Noodles",102,130),
 				new FoodDemo("Prawns",103,170)));
 		public List<FoodDemo> getAllFoodDemo() {
+			repositoryDemo.findAll().forEach(foodList::add);
 			return foodList;
-//			List<FoodDemo> foodList=new ArrayList<>();
-//			repositoryDemo.findAll().forEach(foodList::add);
-//			return foodList;
 		}
 
 		public FoodDemo getFood(String foodName) {
-			return foodList.stream().filter(food->food.getFoodName().equals(foodName)).findFirst().get();
-//			return repositoryDemo.findById(foodName).get();
+			return repositoryDemo.findById(foodName).get();
 		}
 
 		public void addOneFood(FoodDemo fooddemo) {
-			foodList.add(fooddemo);
-//			repositoryDemo.save(fooddemo);
+			repositoryDemo.save(fooddemo);
 		}
 
 		public void updateFood(FoodDemo fooddemo,String foodName) {
-			for(int i= 0; i<foodList.size();i++) {
-			if(foodList.get(i).getFoodName().equals(foodName)) {
-				foodList.set(i, fooddemo);
-				return;
-				}
-	}
-//			repositoryDemo.save(fooddemo);
-			
+			repositoryDemo.save(fooddemo);
 		}
 
 		public void deleteFood(String fooddemo) {
-			foodList.removeIf(remove->remove.equals(fooddemo));
-//			repositoryDemo.deleteById(fooddemo);
-			
+			repositoryDemo.deleteById(fooddemo);
 		}
 
 }
