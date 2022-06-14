@@ -1,0 +1,3 @@
+emp salary
+emp id
+emp name
