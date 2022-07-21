@@ -1,5 +1,7 @@
 package com.drucare.serviceemployee.bean;
 
+import java.util.List;
+
 public class FetchEmployeeDto {
 	private Long empId;
 	private String empNm;
@@ -22,8 +24,22 @@ public class FetchEmployeeDto {
 	private String experience;
 	private Boolean isActive;
 	private Integer orgId;
+	private List<EmployeeDeptBean> empDeptList;
+	private List<EmployeeDesignationBean> empDesignationList;
 	
 	
+	public List<EmployeeDeptBean> getEmpDeptList() {
+		return empDeptList;
+	}
+	public void setEmpDeptList(List<EmployeeDeptBean> empDeptList) {
+		this.empDeptList = empDeptList;
+	}
+	public List<EmployeeDesignationBean> getEmpDesignationList() {
+		return empDesignationList;
+	}
+	public void setEmpDesignationList(List<EmployeeDesignationBean> empDesignationList) {
+		this.empDesignationList = empDesignationList;
+	}
 	public String getFirstNm() {
 		return firstNm;
 	}

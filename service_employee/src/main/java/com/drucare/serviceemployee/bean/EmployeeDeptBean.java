@@ -1,10 +1,10 @@
 package com.drucare.serviceemployee.bean;
 
-public class EmployeeDepartmentsXref {
+public class EmployeeDeptBean {
 	private Long empDeptId;
 	private Long deptId;
-	private Long orgId;
-	private Boolean isactive;
+	private String deptNm;
+	
 	
 	public Long getEmpDeptId() {
 		return empDeptId;
@@ -18,17 +18,10 @@ public class EmployeeDepartmentsXref {
 	public void setDeptId(Long deptId) {
 		this.deptId = deptId;
 	}
-	public Long getOrgId() {
-		return orgId;
+	public String getDeptNm() {
+		return deptNm;
 	}
-	public void setOrgId(Long orgId) {
-		this.orgId = orgId;
+	public void setDeptNm(String deptNm) {
+		this.deptNm = deptNm;
 	}
-	public Boolean getIsactive() {
-		return isactive;
-	}
-	public void setIsactive(Boolean isactive) {
-		this.isactive = isactive;
-	}
-	
 }
