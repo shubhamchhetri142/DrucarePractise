@@ -1,3 +1,8 @@
 Training Practice
+<<<<<<< HEAD
 new omlet
 Some new thing are added to this like text.
+=======
+Omlet,tomato
+Some new thing are added to this like text.
+>>>>>>> 8267602f0d1e077e1b8281798878eee387e52475
